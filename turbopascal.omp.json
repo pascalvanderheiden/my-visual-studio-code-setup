@@ -1,60 +1,112 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "final_space": false,
-  "osc99": false,
-  "console_title": false,
+  "final_space": true,
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
       "horizontal_offset": 0,
       "vertical_offset": 0,
       "segments": [
         {
+          "type": "os",
+          "style": "diamond",
+          "background": "#0e87ca",
+          "foreground": "#FFFFFF",
+          "leading_diamond": "",
+          "properties": {
+            "wsl": "",
+            "wsl_separator": "",
+            "prefix": " "
+          }
+        },
+        {
           "type": "session",
-          "style": "plain",
-          "invert_powerline": false,
-          "foreground": "lightYellow",
+          "style": "diamond",
+          "background": "#0e87ca",
+          "foreground": "#FFFFFF",
+          "trailing_diamond": "\uE0B0",
           "properties": {
             "display_host": false,
             "prefix": "",
-            "user_info_separator": "",
-            "display_user": true
+            "postfix": "\u2800"
           }
         },
         {
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
           "type": "path",
-          "style": "plain",
-          "invert_powerline": false,
-          "foreground": "cyan",
+          "background": "#e66417",
+          "foreground": "#FFFFFF",
           "properties": {
-            "prefix": "<#ffffff>in</> ",
-            "style": "folder"
+            "prefix": "  ",
+            "home_icon": "~",
+            "style": "folder",
+            "postfix": "\u2800"
           }
         },
         {
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
           "type": "git",
-          "style": "plain",
-          "invert_powerline": false,
-          "foreground": "#ff94df",
+          "background": "#87c3e1",
+          "foreground": "#000000",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "properties": {
-            "branch_icon": " <#ff94df><b> </b></>",
             "fetch_stash_count": true,
-            "prefix": "<#ffffff>on</> ",
-            "template": "{{ .HEAD }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}"
+            "fetch_upstream_icon": true,
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}"
           }
         },
-
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "lightGreen",
+          "type": "executiontime",
+          "style": "powerline",
+          "background": "#aad5ea",
+          "foreground": "#000000",
+          "powerline_symbol": "\uE0B0",
+          "trailing_diamond": "",
           "properties": {
-            "prefix": "",
-            "text": "\u276F"
+            "always_enabled": true,
+            "prefix": " \ufbab ",
+            "postfix": "\u2800"
           }
+        },
+        {
+          "type": "kubectl",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#000000",
+          "background": "#d6ffff",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "properties": {
+            "prefix": " \uFD31 ",
+            "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
+          }
+        },
+        {
+          "type": "azfunc",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "background": "#d6ffff",
+          "foreground": "#000000",
+          "properties": {
+            "prefix": " \uf0e7 ",
+            "display_version": false,
+            "display_mode": "files"
+          }
+        },
+        {
+          "background": "#0e87ca",
+          "foreground": "#FFFFFF",
+          "powerline_symbol": "\uE0B0",
+          "style": "powerline",
+          "type": "root"
         }
-      ]
+      ],
+      "type": "prompt"
     }
   ]
 }
