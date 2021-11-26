@@ -61,6 +61,7 @@ Now you can make changes to your Profile settings, for example setting the theme
 ```ps1
 Set-PoshPrompt -Theme https://github.com/pascalvanderheiden/my-visual-studio-code-setupturbopascal.omp.json
 Set-PoshPrompt -Theme C:/github/my-visual-studio-code-setup/turbopascal.omp.json
+Set-PoshPrompt -Theme C:/github/my-visual-studio-code-setup/rainbowflag.omp.json
 ```
 Reload $PROFILE
 ```
@@ -75,21 +76,21 @@ Fontfaces to use (Fonts are in this repo):
 "profiles": {
     "list": [
       {
-        "fontFace": "CaskaydiaCove NF"
-      }
-    ]
-}
-```
-```json
-"profiles": {
-    "list": [
-      {
         "fontFace": "MesloLGM NF"
       }
     ]
 }
 ```
-
+* Install Terminal Icons
+```
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
+Edit $PROFILE
+```
+code . $PROFILE
+```
+Install-Module -Name Terminal-Icons
+```
 * Install Posh-GIt
 Install-Module posh-git -Scope CurrentUser -Force
 Import-Module posh-git
