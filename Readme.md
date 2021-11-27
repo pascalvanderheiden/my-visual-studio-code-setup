@@ -1,12 +1,6 @@
 # My Visual Studio Code Configuration and Extentions
 I'm really attached to my setup in Visual Studio Code. And I want it to be in sync in any environment I work in.
-
-________             ______             ________                           ______
-___  __/___  ___________  /_______      ___  __ \_____ ___________________ ___  /
-__  /  _  / / /_  ___/_  __ \  __ \     __  /_/ /  __ `/_  ___/  ___/  __ `/_  / 
-_  /   / /_/ /_  /   _  /_/ / /_/ /     _  ____// /_/ /_(__  )/ /__ / /_/ /_  /  
-/_/    \__,_/ /_/    /_.___/\____/      /_/     \__,_/ /____/ \___/ \__,_/ /_/   
-                                                                                 
+                                                                               
 ## Install Visual Studio Code
 * Install Visual Studio Code [Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -57,9 +51,13 @@ Edit $PROFILE
 ```
 code . $PROFILE
 ```
+Clone this repo
+```
+git clone https://github.com/pascalvanderheiden/my-visual-studio-code-setup.git
+```
 Now you can make changes to your Profile settings, for example setting the theme
+Colors for Rainbow Theme [Colors]https://colorswall.com/palette/3290
 ```ps1
-Set-PoshPrompt -Theme https://github.com/pascalvanderheiden/my-visual-studio-code-setupturbopascal.omp.json
 Set-PoshPrompt -Theme C:/github/my-visual-studio-code-setup/turbopascal.omp.json
 Set-PoshPrompt -Theme C:/github/my-visual-studio-code-setup/rainbowflag.omp.json
 ```
@@ -71,7 +69,15 @@ Upgrade OhMyPosh
 ```
 choco upgrade oh-my-posh
 ```
-Fontfaces to use (Fonts are in this repo):
+Change Terminal Font in Visual Studio Code (Font is in this repo):
+> CTRL-SHIFT-P: Preferences: Open Settings (JSON)
+```json
+{
+  "terminal.integrated.fontFamily": "MesloLGM NF"
+}
+```
+
+Change Font in Windows Terminal (Font is in this repo):
 ```json
 "profiles": {
     "list": [
@@ -80,16 +86,6 @@ Fontfaces to use (Fonts are in this repo):
       }
     ]
 }
-```
-* Install Terminal Icons
-```
-Install-Module -Name Terminal-Icons -Repository PSGallery
-```
-Edit $PROFILE
-```
-code . $PROFILE
-```
-Install-Module -Name Terminal-Icons
 ```
 * Install Posh-GIt
 Install-Module posh-git -Scope CurrentUser -Force
