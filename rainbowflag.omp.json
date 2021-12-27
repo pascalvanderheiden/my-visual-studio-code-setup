@@ -39,7 +39,7 @@
           "trailing_diamond": "\uE0B0",
           "properties": {
             "prefix": "",
-            "text": " \u276F",
+            "text": " \u2665",
             "postfix": "\u2800"
           }
         },
@@ -79,26 +79,12 @@
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "#FFFFFF",
-          "background": "#750787",
+          "background": "#004dff",
           "leading_diamond": "",
           "trailing_diamond": "",
           "properties": {
             "prefix": " \uFD31 ",
             "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
-          }
-        },
-        {
-          "type": "azfunc",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "background": "#750787",
-          "foreground": "#FFFFFF",
-          "properties": {
-            "prefix": " \uf0e7 ",
-            "display_version": false,
-            "display_mode": "files"
           }
         },
         {
